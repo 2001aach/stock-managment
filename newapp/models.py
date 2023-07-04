@@ -11,5 +11,6 @@ class Login(AbstractUser):
 class stock(models.Model):
     items=models.CharField(max_length=250,null=True)
     price=models.IntegerField()
+    photo = models.ImageField(upload_to='photo', null=True, blank=True)
 
 

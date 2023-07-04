@@ -31,7 +31,7 @@ def loginpage(request):
                 return redirect('user')
         else:
             messages.info(request,'invalid credentials')
-    return render(request,'login.html')
+    return render(request,'log-in.html')
 
 def register(request):
     u_form=loginform()

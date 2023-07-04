@@ -22,6 +22,7 @@ table, th, td {
                           <th>sl No.</th>
                           <th>ITEM</th>
                           <th>PRICE</th>
+                          <th>PHOTO</th>
                           <th>DELETE</th>
                           <th>UPDATE</th>
                         </tr>
@@ -32,6 +33,7 @@ table, th, td {
                           <td class="py-1">{{ forloop.counter }}</td>
                           <td>{{ i.items }}</td>
                           <td>{{ i.price }}</td>
+                          <td><img src="{{i.photo.url}}" style="width:100px" ></td>
                           <td><form  action="{% url 'delete_stock' i.id %}" method="post">
                             {% csrf_token %}
                             <button type="submit" class="btn btn-primary">Delete</button></form>
